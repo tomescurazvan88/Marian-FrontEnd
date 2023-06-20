@@ -1,0 +1,25 @@
+.square {
+    width: 200px;
+    height: 200px;
+}
+
+#square1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: yellow;
+}
+
+#square2 {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    background-color: blue;
+}
+
+#square3 {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    background-color: green;
+}
