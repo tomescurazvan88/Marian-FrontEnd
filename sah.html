@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Sah</title>
+    <style>
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+            border: 1px solid #000;
+        }
+
+        .chessboard div {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+        }
+
+        .white {
+            background-color: #fff;
+        }
+
+        .black {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chessboard" id="chessboard"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const chessboard = document.getElementById("chessboard");
+
+            for (let row = 0; row < 8; row++) {
+                for (let col = 0; col < 8; col++) {
+                    const square = document.createElement("div");
+                    square.classList.add((row + col) % 2 === 0 ? "white" : "black");
+                    chessboard.appendChild(square);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
